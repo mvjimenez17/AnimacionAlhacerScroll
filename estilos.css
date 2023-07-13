@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+   
+    font-family: 'Montserrat', sans-serif;
+    min-height: 800px;
+}
+
+.hero{
+    height: 100vh;
+    min-height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+.hero--reverse{
+    flex-direction: row-reverse;
+}
+
+.hero__title{
+    font-size: 4rem;
+}
+
+.hero__img{
+    width: 100%;
+}
+
+[data-animation="fade"]{
+    opacity: 0;
+    transform: translate(100%);
+    -webkit-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -o-transform: translate(100%);
+    transition: .6s ease-in .3s;
+    -webkit-transition: .6s ease-in .3s;
+    -moz-transition: .6s ease-in .3s;
+    -ms-transition: .6s ease-in .3s;
+    -o-transition: .6s ease-in .3s;
+    --opacity: 1;
+    --transform: translate(0);
+}
+
+[data-animation="show"] {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition:.6s ease-in .3s;
+    -webkit-transition:.6s ease-in .3s;
+    -moz-transition:.6s ease-in .3s;
+    -ms-transition:.6s ease-in .3s;
+    -o-transition:.6s ease-in .3s;
+    --opacity: 1;
+    --transform: scale(1);
+}
+
+
+[data-animation="up"]{
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transition: .6s ease-in .3s;
+    -webkit-transition: .6s ease-in .3s;
+    -moz-transition: .6s ease-in .3s;
+    -ms-transition: .6s ease-in .3s;
+    -o-transition: .6s ease-in .3s;
+    --opacity: 1;
+    --transform: translateY(0);
+}
+
+.unset{
+    opacity: var(--opacity);
+    transform: var(--transform);
+    -webkit-transform: var(--transform);
+    -moz-transform: var(--transform);
+    -ms-transform: var(--transform);
+    -o-transform: var(--transform);
+}
+
+
+
